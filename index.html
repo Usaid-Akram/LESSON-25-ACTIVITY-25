@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Game Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+        <h2>My Game Profile</h2>
+
+        <button onclick="showProfile()">Show Profile</button>
+
+        <div class="row" id="name"></div>
+        <div class="row" id="score"></div>
+        <div class="row" id="topScore"></div>
+        <div class="row" id="rank"></div>
+        <div class="row" id="greeting"></div>
+        <div class="row" id="stars"></div>
+        <div class="row" id="bonus"></div>
+        <div class="row" id="team"></div>
+    </div>
+
+    <script>
+        function showProfile() {
+            let name = "Alex";
+            let gameName = "Minecraft";
+            let myScore = 75;
+            let highScore = 100;
+            let bonus = null;
+            let team;
+            let isTopScore = myScore == highScore;
+            let rank;
+
+            if (myScore >= 80) {
+                rank = "Gold";
+            }
+            else if (myScore >= 50) {
+                rank = "Silver";
+            }
+            else {
+                rank = "Bronze";
+            }
+
+            let hour = new Date().getHours();
+            let greeting;
+
+            if (hour < 12) {
+                greeting = "Good Morning!";
+            }
+            else if (hour < 18) {
+                greeting = "Good Afternoon!";
+            }
+            else {
+                greeting = "Good Evening!";
+            }
+
+            let stars = "";
+            let count = 0;
+
+            while (count < 5) {
+                stars = stars + "*";
+                count++;
+            }
+
+            document.getElementById("name").innerHTML = "Name: " + name;
+
+            document.getElementById("score").innerHTML = "Score: " + myScore + " out of " + highScore;
+
+            document.getElementById("topScore").innerHTML = "Top Score: " + isTopScore;
+
+            document.getElementById("rank").innerHTML = "Rank: " + rank;
+
+            document.getElementById("greeting").innerHTML = "Greeting: " + greeting;
+
+            document.getElementById("stars").innerHTML = "Stars: " + stars;
+
+            document.getElementById("bonus").innerHTML = "Bonus Level: " + bonus;
+
+            document.getElementById("team").innerHTML = "Team Name: " + team;
+        }
+    </script>
+
+</body>
+</html>

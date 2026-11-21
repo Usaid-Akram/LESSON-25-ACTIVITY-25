@@ -1,0 +1,35 @@
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid blue;
+            background-color: aliceblue;
+            margin: 20px auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: navy;
+        }
+
+        button {
+            display: block;
+            margin: auto;
+            background-color: navy;
+            color: white;
+            border-radius: 20px;
+            padding: 8px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .row {
+            border: 1px solid slateblue;
+            border-radius: 5px;
+            padding: 5px 8px;
+            margin: 5px 0;
+        }
